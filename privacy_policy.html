@@ -3,71 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - تطبيق خدمة وطن (Privacy Policy)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>سياسة الخصوصية • تطبيق خدمة وطن (Privacy Policy)</title>
+    <meta name="description" content="سياسة الخصوصية الرسمية لتطبيق ومنصة خدمة وطن (Khedma Watan)">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #E5A93C; --bg: #090E1F; --card-bg: #131D3F; --text: #F1F5F9; --text-muted: #94A3B8; --border: rgba(229, 169, 60, 0.25); }
+        :root {
+            --primary: #E5A93C;
+            --primary-light: #F3C363;
+            --primary-dark: #C28B28;
+            --bg: #090E1F;
+            --card-bg: #101B3B;
+            --card-sub: #16234D;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: rgba(229, 169, 60, 0.22);
+            --border-hover: rgba(229, 169, 60, 0.45);
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background: var(--bg); color: var(--text); padding: 32px 16px; line-height: 1.8; }
-        .container { max-width: 860px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
-        h1 { color: var(--primary); font-size: 26px; font-weight: 900; margin-bottom: 8px; text-align: center; }
-        .date { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
-        h2 { color: #FFFFFF; font-size: 18px; margin: 24px 0 10px 0; border-right: 4px solid var(--primary); padding-right: 12px; }
-        p, li { font-size: 14px; color: var(--text); margin-bottom: 12px; }
-        ul { padding-right: 24px; margin-bottom: 16px; }
-        .nav-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
-        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
-        .badge { display: inline-block; background: rgba(229, 169, 60, 0.15); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; }
+        body { background: var(--bg); color: var(--text); padding: 24px 14px; line-height: 1.85; min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.55); }
+        .header { text-align: center; margin-bottom: 28px; }
+        .logo-badge { display: inline-flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 20px; background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)); font-size: 34px; box-shadow: 0 8px 24px rgba(229, 169, 60, 0.35); margin-bottom: 14px; }
+        h1 { color: #FFFFFF; font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+        .app-meta { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 18px; }
+        .nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 12px; background: var(--card-sub); border: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #0A1024; background: var(--primary); font-weight: 700; border-color: var(--primary); }
+        .info-pill { display: inline-block; background: rgba(229, 169, 60, 0.12); color: var(--primary); border: 1px solid var(--border); padding: 5px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 700; margin-bottom: 16px; }
+        h2 { color: #FFFFFF; font-size: 18px; font-weight: 800; margin: 28px 0 12px 0; border-right: 4px solid var(--primary); padding-right: 12px; display: flex; align-items: center; gap: 8px; }
+        p, li { font-size: 14.5px; color: #E2E8F0; margin-bottom: 12px; }
+        ul { padding-right: 22px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .highlight-card { background: var(--card-sub); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin: 20px 0; }
+        .contact-box { background: rgba(229, 169, 60, 0.08); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-top: 32px; text-align: center; }
+        .contact-box a { color: var(--primary-light); text-decoration: none; font-weight: 700; }
+        .contact-box a:hover { text-decoration: underline; }
+        .en-section { direction: ltr; text-align: left; margin-top: 40px; padding-top: 30px; border-top: 2px dashed rgba(229, 169, 60, 0.3); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .en-section h2 { border-right: none; border-left: 4px solid var(--primary); padding-left: 12px; }
+        .en-section p, .en-section li { font-size: 14px; color: #CBD5E1; }
+        footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 12px; color: var(--text-muted); }
+        @media(max-width: 600px) {
+            .container { padding: 24px 18px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="nav-links">
-            <a href="index.html">← الرئيسية</a>
-            <a href="terms_of_service.html">شروط الاستخدام</a>
-            <a href="delete_account.html">حذف الحساب</a>
+        <div class="header">
+            <div class="logo-badge">🇮🇶</div>
+            <h1>سياسة الخصوصية وحماية البيانات</h1>
+            <div class="app-meta">تطبيق ومنصة خدمة وطن (Khedma Watan) • المشغل: PRO IQ LTD</div>
+            <div class="info-pill">معرف التطبيق (Bundle ID): com.khedmawatan.shop | آخر تحديث: نوفمبر 2026</div>
         </div>
-        <h1>سياسة الخصوصية • Privacy Policy</h1>
-        <p class="date">تطبيق خدمة وطن (Khedma Watan) | آخر تحديث: 1 نوفمبر 2026</p>
 
-        <p>نحن في <strong>تطبيق خدمة وطن</strong> نلتزم التزاماً تاماً بحماية خصوصية مستخدمينا، سواء كانوا مواطنين مستفيدين أو أصحاب مهن وخدمات. توضح هذه الوثيقة كيفية جمع واستخدام وحماية ومسح البيانات الخاصة بك عند استخدام التطبيق أو موقعه الإلكتروني.</p>
+        <div class="nav-links">
+            <a href="index.html">🏠 الرئيسية</a>
+            <a href="privacy.html" class="active">🔒 سياسة الخصوصية</a>
+            <a href="terms.html">📜 شروط الاستخدام</a>
+            <a href="delete_account.html">🗑️ حذف الحساب والبيانات</a>
+        </div>
 
-        <h2>1. البيانات التي نقوم بجمعها</h2>
+        <p>تلتزم إدارة منصة <strong>خدمة وطن (Khedma Watan)</strong>، المُشغلة والمُطورة بواسطة <strong>PRO IQ LTD</strong>، بحماية خصوصية وأمان بيانات مستخدميها من المواطنين وأصحاب الخدمات والمهن في جميع محافظات جمهورية العراق. تهدف هذه الوثيقة إلى بيان ماهية البيانات التي نجمعها، وكيفية استخدامها وحمايتها، وحقوق المستخدم الكاملة وفق سياسات متجري Google Play و Apple App Store.</p>
+
+        <h2>1. التزامنا بحماية الخصوصية</h2>
+        <p>نؤكد التزامنا الصارم بعدم بيع أو تأجير أو مشاركة أي بيانات شخصية أو تجارية لأي جهات إعلانية أو أطراف خارجية لأغراض تسويقية. يتم حفظ ومعالجة البيانات حصراً لغرض تسهيل التواصل المباشر بين طالب الخدمة وصاحب الخدمة وتوفير دليل موثوق ومفهرس بدقة.</p>
+
+        <h2>2. البيانات التي نقوم بجمعها</h2>
         <ul>
-            <li><strong>بيانات التسجيل والحساب:</strong> الاسم، رقم الهاتف المحمول، كلمة المرور المشفرة، المحافظة، والمنطقة.</li>
-            <li><strong>بيانات أصحاب الخدمات والأنشطة:</strong> اسم المحل أو النشاط المهني، وصف الخدمات، أوقات العمل، أرقام التواصل (هاتف، واتساب)، وروابط منصات التواصل الاجتماعي.</li>
-            <li><strong>الصور والملفات:</strong> صور بطاقات العمل (Business Cards)، شعارات الأنشطة، وصور المنتجات والعروض التي يرفعها صاحب الخدمة برغبته واختياره لعرضها للجمهور.</li>
-            <li><strong>بيانات الموقع الجغرافي (Location Data):</strong> عند موافقة المستخدم أو صاحب الخدمة، يتم تحديد إحداثيات موقع النشاط على الخريطة لتسهيل وصول طالبي الخدمة إليه وتحديد المسافة. لا نقوم بتتبع موقعك في الخلفية أثناء إغلاق التطبيق.</li>
-            <li><strong>معرفات الإشعارات (FCM Tokens):</strong> رمز دفع الإشعارات من Google Firebase لإرسال تنبيهات العروض والطلبات المهمة.</li>
+            <li><strong>بيانات طالبي الخدمة (المواطنين):</strong> يتاح لطالب الخدمة تصفح الدليل والبحث في كافة المهن والعيادات والاتصال المباشر بمزودي الخدمات دون الحاجة لإنشاء حساب أو تقديم أي بيانات حساسة.</li>
+            <li><strong>بيانات التسجيل والحساب المهني:</strong> الاسم، رقم الهاتف المحمول العراقي (للتحقق من ملكية الحساب عبر رمز OTP مشفر لمنع الحسابات الوهمية والاحتيالية)، وكلمة المرور المشفرة.</li>
+            <li><strong>بيانات النشاط المهني والخدمة:</strong> اسم المحل أو الورشة أو العيادة، الاختصاص المهني، المحافظة، المنطقة، أوقات وساعات العمل، وأرقام التواصل المباشر (هاتف، واتساب)، وروابط التواصل الاجتماعي المعتمدة باختيار صاحب الخدمة.</li>
+            <li><strong>الصور والمرفقات:</strong> صور بطاقة العمل (Business Card) وصور العروض والمنتجات التي يرفعها صاحب الخدمة برغبته واختياره لملفه التعريفي لعرضها للجمهور.</li>
+            <li><strong>بيانات الموقع الجغرافي (GPS):</strong> إحداثيات الموقع المحددة بموافقة صريحة من المستخدم أو صاحب الخدمة لتثبيت موقع النشاط على الخريطة ومساعدة الزبائن في الوصول إلى العنوان الدقيق. <em>لا يقوم التطبيق إطلاقاً بتتبع موقعك في الخلفية أثناء إغلاق التطبيق.</em></li>
+            <li><strong>معرفات الإشعارات (Firebase Cloud Messaging Tokens):</strong> رمز دفع الإشعارات لتلقي تنبيهات حالة اعتماد الحساب والتحديثات الهامة والرسائل الإدارية.</li>
         </ul>
 
-        <h2>2. الغرض من معالجة البيانات</h2>
+        <h2>3. صلاحيات وأذونات الهاتف (Device Permissions)</h2>
+        <div class="highlight-card">
+            <ul>
+                <li><strong>الكاميرا ومعرض الصور (Camera & Photo Gallery):</strong> تُستخدم حصراً وباختيار المستخدم عند رغبته في رفع صورة بطاقة العمل أو صور المنتجات والعروض المهنية الخاصة به.</li>
+                <li><strong>الموقع الجغرافي (Location / GPS):</strong> يُستخدم عند الحاجة لتحديد موقع الخدمة على الخريطة بدقة وإرشاد العملاء إليها.</li>
+                <li><strong>الإشعارات (Push Notifications):</strong> تُستخدم لإرسال التنبيهات الضرورية المتعلقة بحالة الحساب والطلبات والتحديثات الرسمية.</li>
+            </ul>
+        </div>
+
+        <h2>4. أمن وتشفير البيانات</h2>
+        <p>تُحفظ كافة البيانات على خوادم سحابية مؤمنة ومشفرة عبر بروتوكولات التشفير القياسية <strong>HTTPS / TLS</strong> مع شهادات SSL معتمدة. كما يتم تخزين الصور والملفات عبر منظومة سحابية موزعة ومحمية، مع تطبيق نظام المراقبة الدورية والنسخ الاحتياطي لمنع الفقدان أو الاختراق.</p>
+
+        <h2>5. سلامة المستخدم والمحتوى (User Safety & Content Moderation)</h2>
+        <p>حرصاً على بيئة آمنة ونزيهة، يتضمن التطبيق الأدوات الآتية المتوافقة مع متطلبات المتاجر الرسمية:</p>
         <ul>
-            <li>تمكين أصحاب المهن من عرض أنشطتهم وتسهيل تواصل المواطنين معهم مباشرة عبر الاتصال أو الواتساب.</li>
-            <li>التحقق من صحة أرقام الهواتف عبر رموز OTP لمنع الحسابات الوهمية والاحتيالية.</li>
-            <li>تقديم تجربة بحث سريعة ودقيقة حسب التخصص والمحافظة والمنطقة.</li>
-            <li>إرسال إشعارات فورية للمشرفين عند تسجيل نشاط جديد للموافقة عليه، وإشعار المستخدمين بالعروض الجديدة.</li>
+            <li><strong>زر الإبلاغ الفوري (Report):</strong> يتيح لأي مستخدم الإبلاغ الفوري عن أي محتوى غير لائق أو مخالف لمعايير الاستخدام في صفحة أي خدمة.</li>
+            <li><strong>زر الحظر الفوري (Block):</strong> يتيح للمستخدم حظر أي صاحب خدمة لا يرغب في التعامل معه بنقرة واحدة.</li>
+            <li><strong>التدقيق والمراجعة الإدارية:</strong> تخضع كافة الحسابات والأنشطة الجديدة للمراجعة والتدقيق المستمر من قبل فريق إدارة خدمة وطن قبل اعتماد ظهورها العام.</li>
         </ul>
 
-        <h2>3. مشاركة وحماية البيانات</h2>
+        <h2>6. حذف الحساب والبيانات نهائياً (Account & Data Deletion)</h2>
+        <p>يمتلك المستخدم وصاحب الخدمة الحق الكامل والدائم في حذف حسابه ومحو كافة بياناته نهائياً في أي وقت:</p>
         <ul>
-            <li><strong>لا نقوم إطلاقاً ببيع أو تأجير بياناتك لأي طرف ثالث لأغراض تسويقية.</strong></li>
-            <li>المعلومات المنشورة في بطاقة صاحب الخدمة (الاسم، أرقام الاتصال، الموقع، الصور) هي معلومات عامة تظهر للجمهور بهدف تسهيل طلب الخدمات.</li>
-            <li>نستخدم خوادم سحابية محمية ومشفرة (Cloudflare R2 لتخزين الصور، وخوادم PocketBase المشفرة عبر بروتوكولات HTTPS و SSL).</li>
+            <li><strong>من داخل التطبيق مباشرة (فوري بنقرة واحدة):</strong> من خلال فتح التطبيق ⟵ شاشة الإعدادات ⚙️ ⟵ النزول للأسفل واختيار "حذف الحساب والبيانات نهائياً" ⟵ التأكيد. سيتم فوراً مسح السجل والصور والملفات بالكامل من الخوادم.</li>
+            <li><strong>عبر الويب والبريد الإلكتروني:</strong> يمكن زيارة <a href="delete_account.html" style="color:var(--primary); font-weight:700;">صفحة طلب حذف الحساب</a> أو مراسلتنا عبر البريد الإلكتروني وسيتم تنفيذ الحذف خلال 24 ساعة.</li>
         </ul>
 
-        <h2>4. أذونات التطبيق (App Permissions)</h2>
-        <ul>
-            <li><strong>الكاميرا ومعرض الصور:</strong> لرفع صور العروض والبطاقات وشعارات النشاط فقط عند قيام المستخدم باختيارها.</li>
-            <li><strong>الموقع الجغرافي:</strong> لتثبيت موقع الورشة أو العيادة أو النشاط على الخريطة.</li>
-            <li><strong>الإشعارات:</strong> لإرسال تنبيهات حالة الحساب والتحديثات الهامة.</li>
-        </ul>
+        <div class="contact-box">
+            <h3 style="color:#FFFFFF; margin-bottom:8px;">للتواصل مع فريق الخصوصية والدعم الفني:</h3>
+            <p style="margin-bottom:6px;">البريد الإلكتروني المعتمد: <a href="mailto:Almohanad.dev.app@gmail.com">Almohanad.dev.app@gmail.com</a></p>
+            <p style="margin-bottom:6px;">الموقع الإلكتروني الرسمي: <a href="https://khedma-watan.shop" target="_blank">https://khedma-watan.shop</a></p>
+            <p style="margin-bottom:0; font-size:13px; color:var(--text-muted);">الجهة المطورة والناشرة: PRO IQ LTD</p>
+        </div>
 
-        <h2>5. حقوق المستخدم وحذف الحساب (Account Deletion)</h2>
-        <p>يحق لأي مستخدم أو صاحب خدمة في أي وقت تعديل بياناته، أو طلب مسح حسابه بالكامل وجميع الصور والمنتجات والمراجعات المرتبطة به فوراً من داخل التطبيق عبر صفحة الإعدادات -> "حذف الحساب والبيانات نهائياً"، أو عبر زيارة صفحة <a href="delete_account.html" style="color:var(--primary);">طلب حذف الحساب عبر الويب</a>.</p>
+        <div class="en-section">
+            <h2>Privacy Policy • English Summary</h2>
+            <p><strong>Application:</strong> Khedma Watan (خدمة وطن)<br>
+            <strong>Package / Bundle ID:</strong> com.khedmawatan.shop<br>
+            <strong>Operated & Published by:</strong> PRO IQ LTD<br>
+            <strong>Last Updated:</strong> November 2026</p>
 
-        <h2>6. التواصل معنا</h2>
-        <p>إذا كان لديك أي استفسار أو رغبة في الاستعلام عن بياناتك، يمكنك التواصل معنا عبر البريد الإلكتروني الرسمي: <a href="mailto:info@khedmawatan.iq" style="color:var(--primary);">info@khedmawatan.iq</a>.</p>
+            <p><strong>1. Data Collection:</strong> Khedma Watan collects user registration details (name, Iraqi mobile number for OTP authentication, encrypted password), professional business profile details (business name, category, governorate, work hours, contact numbers), optional business card/product photos, GPS location for mapping service locations, and Firebase Cloud Messaging tokens for transactional notifications.</p>
+
+            <p><strong>2. Data Usage & Protection:</strong> All collected data is strictly used to connect service seekers directly with local providers across Iraqi provinces. We do not sell, rent, or trade personal data to third parties. All network transmissions are secured over HTTPS/TLS.</p>
+
+            <p><strong>3. User Safety & Content Moderation:</strong> The application includes in-app mechanisms allowing users to report abusive or inappropriate content and block providers with one tap. Administrative reviews are conducted to ensure a safe environment.</p>
+
+            <p><strong>4. Account and Data Deletion:</strong> Users have the unrestricted right to permanently delete their account and all associated data at any time either directly inside the app (Settings &gt; Delete Account) or by requesting deletion through our web deletion portal at <a href="delete_account.html" style="color:var(--primary);">delete_account.html</a> or via email to <a href="mailto:Almohanad.dev.app@gmail.com" style="color:var(--primary);">Almohanad.dev.app@gmail.com</a>.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 تطبيق خدمة وطن (Khedma Watan) • جميع الحقوق محفوظة لشركة PRO IQ LTD</p>
+        </footer>
     </div>
 </body>
 </html>
