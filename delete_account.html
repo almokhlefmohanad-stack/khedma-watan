@@ -3,69 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>طلب حذف الحساب والبيانات - تطبيق خدمة وطن (Account Deletion Request)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>حذف الحساب والبيانات • تطبيق خدمة وطن (Account Deletion)</title>
+    <meta name="description" content="تعليمات وطلب حذف الحساب والبيانات نهائياً من تطبيق ومنصة خدمة وطن (Khedma Watan) وفق متطلبات Google Play و App Store">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #E5A93C; --danger: #EF4444; --bg: #090E1F; --card-bg: #131D3F; --text: #F1F5F9; --text-muted: #94A3B8; --border: rgba(239, 68, 68, 0.3); }
+        :root {
+            --primary: #E5A93C;
+            --primary-light: #F3C363;
+            --danger: #EF4444;
+            --danger-hover: #DC2626;
+            --bg: #090E1F;
+            --card-bg: #101B3B;
+            --card-sub: #16234D;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: rgba(229, 169, 60, 0.22);
+            --danger-border: rgba(239, 68, 68, 0.35);
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background: var(--bg); color: var(--text); padding: 32px 16px; line-height: 1.8; }
-        .container { max-width: 860px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
-        h1 { color: var(--danger); font-size: 26px; font-weight: 900; margin-bottom: 8px; text-align: center; }
-        .date { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
-        h2 { color: #FFFFFF; font-size: 18px; margin: 24px 0 10px 0; border-right: 4px solid var(--danger); padding-right: 12px; }
-        p, li { font-size: 14px; color: var(--text); margin-bottom: 12px; }
-        ul, ol { padding-right: 24px; margin-bottom: 16px; }
-        .box { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 16px; padding: 18px; margin: 20px 0; }
-        .btn-mail { display: inline-block; background: var(--danger); color: white; padding: 12px 28px; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 10px; transition: 0.2s; }
-        .btn-mail:hover { background: #DC2626; }
-        .nav-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
-        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
+        body { background: var(--bg); color: var(--text); padding: 24px 14px; line-height: 1.85; min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.55); }
+        .header { text-align: center; margin-bottom: 28px; }
+        .logo-badge { display: inline-flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 20px; background: linear-gradient(135deg, #EF4444, #B91C1C); font-size: 34px; box-shadow: 0 8px 24px rgba(239, 68, 68, 0.35); margin-bottom: 14px; }
+        h1 { color: #FFFFFF; font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+        .app-meta { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 18px; }
+        .nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 12px; background: var(--card-sub); border: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #FFFFFF; background: var(--danger); font-weight: 700; border-color: var(--danger); }
+        .info-pill { display: inline-block; background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid var(--danger-border); padding: 5px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 700; margin-bottom: 16px; }
+        .warning-card { background: rgba(239, 68, 68, 0.1); border: 1px solid var(--danger-border); border-radius: 18px; padding: 22px; margin: 20px 0; }
+        .warning-title { color: #F87171; font-weight: 800; font-size: 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        h2 { color: #FFFFFF; font-size: 18px; font-weight: 800; margin: 28px 0 12px 0; border-right: 4px solid var(--danger); padding-right: 12px; display: flex; align-items: center; gap: 8px; }
+        p, li { font-size: 14.5px; color: #E2E8F0; margin-bottom: 12px; }
+        ul, ol { padding-right: 22px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .step-card { background: var(--card-sub); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 14px; }
+        .step-num { background: var(--danger); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; flex-shrink: 0; }
+        .step-body { font-size: 14.5px; color: #E2E8F0; }
+        .step-body strong { color: #FFFFFF; }
+        .form-box { background: var(--card-sub); border: 1px solid var(--border); border-radius: 20px; padding: 26px; margin: 26px 0; }
+        .form-group { margin-bottom: 16px; text-align: right; }
+        .form-group label { display: block; font-size: 13.5px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px; }
+        .form-group input, .form-group textarea { width: 100%; background: #0A1024; border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 12px 14px; color: #FFFFFF; font-size: 14px; outline: none; transition: 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
+        .btn-submit { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--danger); color: white; border: none; padding: 14px 28px; border-radius: 14px; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; width: 100%; transition: background 0.2s; }
+        .btn-submit:hover { background: var(--danger-hover); }
+        .en-section { direction: ltr; text-align: left; margin-top: 40px; padding-top: 30px; border-top: 2px dashed rgba(229, 169, 60, 0.3); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .en-section h2 { border-right: none; border-left: 4px solid var(--danger); padding-left: 12px; }
+        .en-section p, .en-section li { font-size: 14px; color: #CBD5E1; }
+        footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 12px; color: var(--text-muted); }
+        @media(max-width: 600px) {
+            .container { padding: 24px 18px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="nav-links">
-            <a href="index.html">← الرئيسية</a>
-            <a href="privacy_policy.html">سياسة الخصوصية</a>
-            <a href="terms_of_service.html">شروط الاستخدام</a>
+        <div class="header">
+            <div class="logo-badge">🗑️</div>
+            <h1>طلب وتعليمات حذف الحساب والبيانات نهائياً</h1>
+            <div class="app-meta">تطبيق ومنصة خدمة وطن (Khedma Watan) • المشغل: PRO IQ LTD</div>
+            <div class="info-pill">متوافق مع سياسات Google Play و Apple App Store وحماية البيانات</div>
         </div>
-        <h1>طلب حذف الحساب والبيانات • Account Deletion</h1>
-        <p class="date">تطبيق خدمة وطن (Khedma Watan) | وفق متطلبات متجر Google Play و App Store</p>
 
-        <div class="box">
-            <h3 style="color:var(--danger); margin-bottom:6px;">⚠️ تنبيه هام بشأن حذف الحساب والبيانات:</h3>
-            <p style="margin-bottom:0;">إن عملية حذف الحساب والبيانات هي عملية <strong>فورية ودائمة ولا يمكن التراجع عنها</strong>. عند إتمام الحذف، سيتم محو ملف النشاط التجاري، العروض الخاصة، أرقام الهواتف، الصور، والتقييمات بالكامل من خوادمنا السحابية.</p>
+        <div class="nav-links">
+            <a href="index.html">🏠 الرئيسية</a>
+            <a href="privacy.html">🔒 سياسة الخصوصية</a>
+            <a href="terms.html">📜 شروط الاستخدام</a>
+            <a href="account_deletion.html" class="active">🗑️ حذف الحساب والبيانات</a>
+        </div>
+
+        <p>تلتزم إدارة تطبيق <strong>خدمة وطن (Khedma Watan)</strong>، ، بمنح كافة المستخدمين وأصحاب الخدمات السيطرة الكاملة على بياناتهم الشخصية والمهنية، بما في ذلك الحق الدائم والمجاني في حذف الحساب ومسح كافة البيانات المرتبطة به نهائياً وفورياً والمعتمدة من قبل  Google و Apple.</p>
+
+        <div class="warning-card">
+            <div class="warning-title">⚠️ تنبيه هام قبل المتابعة:</div>
+            <p style="margin-bottom:0;">إن عملية حذف الحساب والبيانات هي عملية <strong>نهائية ودائمة ولا يمكن التراجع عنها</strong>. عند إتمام الحذف، سيتم محو ملف النشاط التجاري، العروض الخاصة، أرقام الهواتف، الصور، والتقييمات بالكامل من خوادمنا ولن نتمكن من استعادة أي منها لاحقاً.</p>
         </div>
 
         <h2>الطريقة الأولى: الحذف الفوري المباشر من داخل التطبيق (موصى بها)</h2>
-        <p>إذا كان التطبيق مثبتاً على هاتفك، يمكنك حذف حسابك في أي وقت بخطوات بسيطة:</p>
-        <ol>
-            <li>افتح <strong>تطبيق خدمة وطن</strong> على هاتفك.</li>
-            <li>انتقل إلى تبويب <strong>"الإعدادات"</strong> من الشريط السفلي للتطبيق.</li>
-            <li>مرر للأسفل إلى قسم <strong>"حذف الحساب والبيانات نهائياً (Delete Account)"</strong>.</li>
-            <li>اضغط على الزر الأحمر وأكّد رغبتك في الحذف.</li>
-            <li>سيقوم التطبيق فوراً بمسح سجلك من السيرفر السحابي، وحذف الصور والمنتجات والتقييمات، ومسح الجلسة المحلية بالكامل.</li>
-        </ol>
+        <p>إذا كان التطبيق مثبتاً على هاتفك، يمكنك تنفيذ الحذف الفوري بنقرة واحدة ودون الحاجة لأي انتظار باتباع الخطوات الآتية:</p>
 
-        <h2>الطريقة الثانية: طلب الحذف عبر الويب (في حال قمت بحذف التطبيق مسبقاً)</h2>
-        <p>إذا قمت بإلغاء تثبيت التطبيق وترغب في حذف بياناتك ورقم هاتفك من خوادمنا، يرجى إرسال بريد إلكتروني يحتوي على رقم هاتفك المسجل في التطبيق إلى:</p>
-        <p style="text-align:center;">
-            <a class="btn-mail" href="mailto:info@khedmawatan.iq?subject=طلب حذف حساب في تطبيق خدمة وطن&body=مرحباً، أطلب حذف حسابي وجميع بياناتي من تطبيق خدمة وطن. رقم هاتفي المسجل هو: ">
-                ✉️ إرسال طلب حذف الحساب (info@khedmawatan.iq)
-            </a>
-        </p>
+        <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-body">افتح <strong>تطبيق خدمة وطن</strong> على هاتفك المحمول.</div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-body">انتقل إلى تبويب <strong>الإعدادات ⚙️</strong> من الشريط السفلي للتطبيق.</div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-body">انزل إلى أسفل الشاشة واضغط على خيار <strong>"حذف الحساب والبيانات نهائياً"</strong> (باللون الأحمر).</div>
+        </div>
+        <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-body">أكّد رغبتك بالضغط على <strong>"تأكيد الحذف النهائي"</strong> في النافذة المنبثقة، وسيتم فوراً في نفس اللحظة مسح حسابك وكافة صورك وبياناتك من السيرفر وتسجيل خروجك.</div>
+        </div>
 
-        <h2>ما هي البيانات التي يتم حذفها نهائياً؟</h2>
+        <h2>الطريقة الثانية: طلب الحذف عبر الويب (في حال قمت بإلغاء تثبيت التطبيق مسبقاً)</h2>
+        <p>إذا قمت بحذف التطبيق وترغب في طلب مسح بياناتك ورقم هاتفك عن بُعد، يمكنك تعبئة النموذج الآتي أو مراسلتنا مباشرة وسيتم تنفيذ الحذف خلال <strong>24 ساعة</strong>:</p>
+
+        <div class="form-box">
+            <form id="deletionForm" onsubmit="handleDeletionSubmit(event)">
+                <div class="form-group">
+                    <label>الاسم الكامل أو اسم النشاط المسجل:</label>
+                    <input type="text" id="delName" placeholder="مثال: المهندس أحمد علي / ورشة النور" required>
+                </div>
+                <div class="form-group">
+                    <label>رقم الهاتف المسجل بالتطبيق (المستخدم في تسجيل الدخول):</label>
+                    <input type="tel" id="delPhone" placeholder="مثال: 07701234567" dir="ltr" style="text-align:right;" required>
+                </div>
+                <div class="form-group">
+                    <label>سبب الحذف (اختياري):</label>
+                    <textarea id="delReason" rows="3" placeholder="ملاحظات أو سبب رغبتك في حذف الحساب..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    ✉️ إرسال طلب الحذف الفوري إلى فريق الدعم
+                </button>
+            </form>
+        </div>
+
+        <h2>ما هي فئات البيانات التي يتم حذفها نهائياً؟</h2>
         <ul>
-            <li><strong>بيانات الملف الشخصي:</strong> الاسم، رقم الهاتف، والرمز السري.</li>
-            <li><strong>بيانات النشاط المهني:</strong> اسم المحل أو الورشة، الوصف، والموقع الجغرافي.</li>
-            <li><strong>الصور والمرفقات:</strong> صور البطاقة والمنتجات المرفوعة على سحابة Cloudflare R2.</li>
-            <li><strong>المراجعات والتقييمات:</strong> سجل التقييمات والتعليقات الخاصة بحسابك.</li>
-            <li><strong>رموز الإشعارات:</strong> رمز FCM لجهازك لمنع وصول أي إشعار مستقبلي.</li>
+            <li><strong>بيانات الحساب الشخصية:</strong> الاسم، رقم الهاتف المحمول، وكلمة المرور المشفرة.</li>
+            <li><strong>بيانات الملف المهني:</strong> اسم المحل أو الورشة، التخصص، العنوان، وأوقات العمل.</li>
+            <li><strong>الصور والمرفقات:</strong> صور بطاقة العمل، صور العروض، وصور المنتجات المرفوعة على السحابة التخزينية.</li>
+            <li><strong>بيانات التفاعل:</strong> سجل التقييمات، المفضلة، وسجلات الجلسات المحلية.</li>
+            <li><strong>معرفات الأجهزة:</strong> رمز دفع الإشعارات Firebase Cloud Messaging لمنع وصول أي إشعار مستقبلي بعد الحذف.</li>
         </ul>
 
-        <h2>فترة الاحتفاظ بالبيانات (Data Retention)</h2>
-        <p>تتم معالجة طلبات الحذف الواردة عبر التطبيق <strong>فورياً وفي نفس الثانية</strong>. أما الطلبات الواردة عبر البريد الإلكتروني فتتم معالجتها خلال مدة أقصاها 48 ساعة بعد التحقق من ملكية رقم الهاتف.</p>
+        <h2>فترة ومبدأ الاحتفاظ بالبيانات (Data Retention)</h2>
+        <p>• <strong>الحذف من داخل التطبيق:</strong> يتم <strong>فورياً وفي نفس الثانية</strong> دون أي مهلة زمنية.<br>
+        • <strong>الطلبات عبر البريد الإلكتروني:</strong> تتم معالجتها والتحقق منها خلال مدة أقصاها <strong>24 إلى 48 ساعة</strong>.<br>
+        • <strong>البيانات المحتفظ بها:</strong> لا يتم الاحتفاظ بأي نسخ احتياطية للمعلومات المحذوفة، ويتم مسح السجلات بالكامل وبشكل لا يمكن استرجاعه.</p>
+
+        <div class="en-section">
+            <h2>Account & Data Deletion • Google Play & App Store Compliance</h2>
+            <p><strong>Application:</strong> Khedma Watan (خدمة وطن)<br>
+            <strong>Package / Bundle ID:</strong> com.khedmawatan.shop<br>
+            <strong>Operated & Published by:</strong> PRO IQ LTD<br>
+            <strong>Official Support:</strong> <a href="mailto:Almohanad.dev.app@gmail.com" style="color:var(--primary);">Almohanad.dev.app@gmail.com</a></p>
+
+            <p><strong>1. In-App Direct Deletion (Instant):</strong><br>
+            Open Khedma Watan &gt; Navigate to <strong>Settings ⚙️</strong> &gt; Scroll to the bottom &gt; Tap <strong>"Permanently Delete Account"</strong> &gt; Confirm. Your profile, business card, uploaded photos, products, and device tokens are wiped instantaneously.</p>
+
+            <p><strong>2. Web / Remote Deletion Request:</strong><br>
+            If you have uninstalled the app, you can request account deletion by emailing <a href="mailto:Almohanad.dev.app@gmail.com" style="color:var(--primary);">Almohanad.dev.app@gmail.com</a> with the subject <code>Delete Khedma Watan Account</code> and your registered phone number, or by using the web request form above. Requests are processed within 24-48 hours.</p>
+
+            <p><strong>3. Deleted Data Scope:</strong> Authentication details, mobile number, business listing, uploaded media/images, user reviews, and notification tokens. No retained backup copies exist once deleted.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 تطبيق خدمة وطن (Khedma Watan) • جميع الحقوق محفوظة لشركة PRO IQ LTD</p>
+        </footer>
     </div>
+
+    <script>
+        function handleDeletionSubmit(e) {
+            e.preventDefault();
+            var name = document.getElementById('delName').value.trim();
+            var phone = document.getElementById('delPhone').value.trim();
+            var reason = document.getElementById('delReason').value.trim();
+
+            var subject = encodeURIComponent("طلب حذف حساب وبيانات - تطبيق خدمة وطن: " + phone);
+            var body = encodeURIComponent(
+                "مرحباً فريق دعم تطبيق خدمة وطن،\n\n" +
+                "يرجى حذف حسابي وكافة بياناتي المرتبطة نهائياً من خوادم التطبيق وفق سياسة الخصوصية وحذف البيانات المعتمدة.\n\n" +
+                "بيانات الحساب:\n" +
+                "- الاسم: " + name + "\n" +
+                "- رقم الهاتف المسجل: " + phone + "\n" +
+                "- السبب/الملاحظات: " + (reason || "طلب حذف نهائي") + "\n\n" +
+                "وشكراً جزيلاً."
+            );
+
+            window.location.href = "mailto:Almohanad.dev.app@gmail.com?subject=" + subject + "&body=" + body;
+        }
+    </script>
 </body>
 </html>
