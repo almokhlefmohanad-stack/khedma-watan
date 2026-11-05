@@ -3,62 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شروط الاستخدام - تطبيق خدمة وطن (Terms of Service)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>شروط الاستخدام • تطبيق خدمة وطن (Terms of Service)</title>
+    <meta name="description" content="شروط وأحكام استخدام تطبيق ومنصة خدمة وطن (Khedma Watan)">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #E5A93C; --bg: #090E1F; --card-bg: #131D3F; --text: #F1F5F9; --text-muted: #94A3B8; --border: rgba(229, 169, 60, 0.25); }
+        :root {
+            --primary: #E5A93C;
+            --primary-light: #F3C363;
+            --primary-dark: #C28B28;
+            --bg: #090E1F;
+            --card-bg: #101B3B;
+            --card-sub: #16234D;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: rgba(229, 169, 60, 0.22);
+            --border-hover: rgba(229, 169, 60, 0.45);
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background: var(--bg); color: var(--text); padding: 32px 16px; line-height: 1.8; }
-        .container { max-width: 860px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
-        h1 { color: var(--primary); font-size: 26px; font-weight: 900; margin-bottom: 8px; text-align: center; }
-        .date { text-align: center; color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
-        h2 { color: #FFFFFF; font-size: 18px; margin: 24px 0 10px 0; border-right: 4px solid var(--primary); padding-right: 12px; }
-        p, li { font-size: 14px; color: var(--text); margin-bottom: 12px; }
-        ul { padding-right: 24px; margin-bottom: 16px; }
-        .nav-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
-        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: 13px; }
+        body { background: var(--bg); color: var(--text); padding: 24px 14px; line-height: 1.85; min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 36px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.55); }
+        .header { text-align: center; margin-bottom: 28px; }
+        .logo-badge { display: inline-flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 20px; background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)); font-size: 34px; box-shadow: 0 8px 24px rgba(229, 169, 60, 0.35); margin-bottom: 14px; }
+        h1 { color: #FFFFFF; font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+        .app-meta { color: var(--primary); font-size: 14px; font-weight: 700; margin-bottom: 18px; }
+        .nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 12px; background: var(--card-sub); border: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #0A1024; background: var(--primary); font-weight: 700; border-color: var(--primary); }
+        .info-pill { display: inline-block; background: rgba(229, 169, 60, 0.12); color: var(--primary); border: 1px solid var(--border); padding: 5px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 700; margin-bottom: 16px; }
+        h2 { color: #FFFFFF; font-size: 18px; font-weight: 800; margin: 28px 0 12px 0; border-right: 4px solid var(--primary); padding-right: 12px; display: flex; align-items: center; gap: 8px; }
+        p, li { font-size: 14.5px; color: #E2E8F0; margin-bottom: 12px; }
+        ul { padding-right: 22px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .highlight-card { background: var(--card-sub); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin: 20px 0; }
+        .contact-box { background: rgba(229, 169, 60, 0.08); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-top: 32px; text-align: center; }
+        .contact-box a { color: var(--primary-light); text-decoration: none; font-weight: 700; }
+        .contact-box a:hover { text-decoration: underline; }
+        .en-section { direction: ltr; text-align: left; margin-top: 40px; padding-top: 30px; border-top: 2px dashed rgba(229, 169, 60, 0.3); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .en-section h2 { border-right: none; border-left: 4px solid var(--primary); padding-left: 12px; }
+        .en-section p, .en-section li { font-size: 14px; color: #CBD5E1; }
+        footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 12px; color: var(--text-muted); }
+        @media(max-width: 600px) {
+            .container { padding: 24px 18px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="nav-links">
-            <a href="index.html">← الرئيسية</a>
-            <a href="privacy_policy.html">سياسة الخصوصية</a>
-            <a href="delete_account.html">حذف الحساب</a>
+        <div class="header">
+            <div class="logo-badge">🇮🇶</div>
+            <h1>شروط وأحكام الاستخدام</h1>
+            <div class="app-meta">تطبيق ومنصة خدمة وطن (Khedma Watan) • المشغل: PRO IQ LTD</div>
+            <div class="info-pill">معرف التطبيق (Bundle ID): com.khedmawatan.shop | آخر تحديث: نوفمبر 2026</div>
         </div>
-        <h1>شروط وأحكام الاستخدام • Terms of Service</h1>
-        <p class="date">تطبيق خدمة وطن (Khedma Watan) | آخر تحديث: 1 نوفمبر 2026</p>
 
-        <p>مرحباً بكم في <strong>منصة وتطبيق خدمة وطن</strong>. يرجى قراءة هذه الشروط بعناية قبل استخدام التطبيق. إن استخدامك للتطبيق يُعد موافقة صريحة وكاملة على هذه الشروط والأحكام.</p>
+        <div class="nav-links">
+            <a href="index.html">🏠 الرئيسية</a>
+            <a href="privacy.html">🔒 سياسة الخصوصية</a>
+            <a href="terms.html" class="active">📜 شروط الاستخدام</a>
+            <a href="delete_account.html">🗑️ حذف الحساب والبيانات</a>
+        </div>
 
-        <h2>1. طبيعة المنصة</h2>
-        <p>تطبيق خدمة وطن هو منصة رقمية وسيطة تهدف إلى ربط أصحاب المهن والخدمات والحرفيين والمراكز التجارية بالجمهور وطالبي الخدمة في جميع محافظات العراق. التطبيق لا يتقاضى عمولة عن الصفقات والاتفاقات المباشرة بين المواطن وصاحب الخدمة.</p>
+        <p>مرحباً بكم في منصة وتطبيق <strong>خدمة وطن (Khedma Watan)</strong>. تُحدد هذه الوثيقة الشروط والضوابط الحاكمة لاستخدام المنصة لكافة الأطراف (طالبي الخدمات وأصحاب الأنشطة والمهن) في عموم محافظات العراق. إن استخدامك للتطبيق يُعد إقراراً وقبولاً كاملاً بالالتزام بهذه الشروط.</p>
 
-        <h2>2. التزامات أصحاب الخدمات</h2>
+        <h2>1. طبيعة المنصة ودورها</h2>
+        <p>تعمل منصة "خدمة وطن" كدليل رقمي وطني وحلقة وصل مباشرة بين المواطنين من طالبي الخدمات وبين الحرفيين والمهنيين وأصحاب المراكز والعيادات والورش في العراق. لا تتقاضى المنصة أي عمولة وساطة على المعاملات أو الاتفاقيات المالية المباشرة بين المواطن وصاحب الخدمة.</p>
+
+        <h2>2. شروط ومعايير تسجيل أصحاب الخدمات</h2>
         <ul>
-            <li>تقديم بيانات دقيقة وصحيحة بشأن الهوية، رقم الهاتف، والنشاط المهني.</li>
-            <li>الالتزام بالأسعار والمواصفات المعروضة في بطاقات المنتجات والعروض الخاصة.</li>
-            <li>يُمنع منعاً باتاً نشر أي محتوى مخالف للقوانين العراقية، أو مخل بالآداب العامة، أو منتهك لحقوق الملكية الفكرية.</li>
-            <li>تخضع جميع طلبات الانضمام الجديدة لمراجعة وتدقيق الإدارة قبل تفعيل ظهورها في المنصة لضمان جودة وموثوقية الخدمات.</li>
+            <li><strong>صحة البيانات:</strong> يلتزم صاحب الخدمة بتقديم معلومات صحيحة وحقيقية ومحدثة (الاسم المهني، المحافظة، العنوان الدقيق، وأرقام الهواتف)، وتحمل المسؤولية المهنية والقانونية الكاملة عن طبيعة نشاطه.</li>
+            <li><strong>مشروعية النشاط:</strong> يجب أن يمثل النشاط المسجل عملاً مشروعاً ومرخصاً وفق القوانين والأنظمة المعمول بها في جمهورية العراق.</li>
+            <li><strong>التدقيق والمراجعة الإدارية:</strong> تخضع كافة طلبات الانضمام والأنشطة المهنية للتدقيق والمراجعة المسبقة من قبل فريق إدارة خدمة وطن لضمان موثوقية وجودة الخدمات قبل اعتماد ظهورها في الدليل العام.</li>
         </ul>
 
-        <h2>3. التزامات طالبي الخدمة</h2>
+        <h2>3. إدارة العروض والمنتجات والمحتوى</h2>
+        <div class="highlight-card">
+            <ul>
+                <li>يملك صاحب الخدمة المعتمد لوحة تحكم مخصصة لإدارة بيانات نشاطه، وإضافة حتى 15 منتجاً أو عرضاً خاصاً بالصور والتفاصيل والأسعار.</li>
+                <li>يتحمل صاحب الخدمة المسؤولية التامة عن دقة الأسعار والمواصفات المعروضة في بطاقة خدمته.</li>
+                <li><strong>المحتوى المحظور:</strong> يُمنع منعاً باتاً رفع أو نشر أي محتوى مضلل، مسيء، تشهيري، خادش للحياء، منتهك لحقوق الملكية الفكرية، أو مخالف للآداب والنظام العام.</li>
+            </ul>
+        </div>
+
+        <h2>4. التزامات طالبي الخدمات وحماية المجتمع</h2>
         <ul>
-            <li>استخدام التطبيق للأغراض المشروعة والتواصل الجاد والمحترم مع أصحاب الخدمات.</li>
-            <li>تقديم تقييمات موضوعية وصادقة تعكس التجربة الفعلية مع صاحب الخدمة دون تجريح أو إساءة.</li>
+            <li>استخدام التطبيق للأغراض الخدمية والمهنية المشروعة والتواصل الجاد والمحترم مع مزودي الخدمات.</li>
+            <li>الالتزام بالموضوعية والنزاهة في التقييمات والتعليقات دون تجريح أو إساءة شخصية.</li>
         </ul>
 
-        <h2>4. الاشتراكات والرسوم</h2>
-        <p>يمنح التطبيق فترة تجريبية مجانية لكل صاحب خدمة جديد. بعد انتهاء الفترة المجانية، يتطلب استمرار عرض النشاط اشتراكاً شهرياً رمزياً يُحدد في التطبيق لضمان استمرارية الصيانة وتطوير الخوادم.</p>
+        <h2>5. سلامة المستخدم والمراقبة (User Safety & Content Moderation)</h2>
+        <p>تطبق المنصة سياسة صارمة ضد السلوكيات والممارسات المخالفة (Zero-Tolerance Policy):</p>
+        <ul>
+            <li>يوفر التطبيق أدوات مدمجة تتيح الإبلاغ الفوري عن أي محتوى أو مزود خدمة مخالف.</li>
+            <li>يوفر التطبيق أداة حظر فورية (Block) لأي مستخدم أو صاحب خدمة بنقرة واحدة.</li>
+            <li>تحتفظ إدارة المنصة بالحق الكامل وغير المشروط في إيقاف أو حظر أو حذف أي حساب يخالف شروط الاستخدام أو يتلقى بلاغات متكررة تثبت إخلاله بمعايير الجودة والأمانة.</li>
+        </ul>
 
-        <h2>5. إخلاء المسؤولية</h2>
-        <p>تطبيق خدمة وطن يبذل أقصى جهده للتحقق من هوية أصحاب الخدمات، ولكن الاتفاق النهائي وتنفيذ العمل والتعاملات المالية تقع على مسؤولية الطرفين (طالب الخدمة وصاحب الخدمة) بصورة مباشرة.</p>
+        <h2>6. إخلاء المسؤولية القانونية</h2>
+        <p>تبذل منصة "خدمة وطن" أقصى العناية في مراجعة وتدقيق هوية وموثوقية أصحاب الخدمات، ومع ذلك فإن الاتفاق النهائي وتنفيذ الأعمال والتعاملات المالية تقع على مسؤولية الطرفين (طالب الخدمة وصاحب الخدمة) بصورة مباشرة، دون أي مسؤولية تقصيرية أو تعاقدية على عاتق المنصة.</p>
 
-        <h2>6. إنهاء الحساب وتعديل الشروط</h2>
-        <p>تحتفظ إدارة المنصة بحق حظر أو إلغاء أي حساب ينتهك هذه الشروط. كما يحق للمستخدم إنهاء حسابه وحذف بياناته في أي وقت.</p>
+        <h2>7. حذف الحساب وإنهاء الخدمة</h2>
+        <p>يحق لأي مستخدم أو صاحب خدمة إنهاء حسابه وحذف بياناته نهائياً في أي وقت مباشرة من خلال شاشة الإعدادات داخل التطبيق أو عبر التواصل مع فريق الدعم الفني، وسيتم مسح السجلات بالكامل فوراً وفق سياسة حذف البيانات المعتمدة.</p>
 
-        <h2>7. القانون الواجب التطبيق</h2>
-        <p>تخضع هذه الشروط وتُفسر وفقاً للقوانين والأنظمة المرعية في جمهورية العراق.</p>
+        <h2>8. القانون الحاكم والاختصاص القضائي</h2>
+        <p>تخضع هذه الشروط والأحكام وتُفسر وفقاً للقوانين والأنظمة النافذة في جمهورية العراق، وتختص المحاكم العراقية بالنظر في أي نزاع قد ينشأ بخصوصها.</p>
+
+        <div class="contact-box">
+            <h3 style="color:#FFFFFF; margin-bottom:8px;">للاستفسارات القانونية والدعم الفني:</h3>
+            <p style="margin-bottom:6px;">البريد الإلكتروني المعتمد: <a href="mailto:Almohanad.dev.app@gmail.com">Almohanad.dev.app@gmail.com</a></p>
+            <p style="margin-bottom:6px;">الموقع الإلكتروني الرسمي: <a href="https://khedma-watan.shop" target="_blank">https://khedma-watan.shop</a></p>
+            <p style="margin-bottom:0; font-size:13px; color:var(--text-muted);">الجهة المطورة والناشرة: PRO IQ LTD</p>
+        </div>
+
+        <div class="en-section">
+            <h2>Terms of Service • English Summary</h2>
+            <p><strong>Application:</strong> Khedma Watan (خدمة وطن)<br>
+            <strong>Package / Bundle ID:</strong> com.khedmawatan.shop<br>
+            <strong>Operated & Published by:</strong> PRO IQ LTD<br>
+            <strong>Last Updated:</strong> November 2026</p>
+
+            <p><strong>1. Nature of Platform:</strong> Khedma Watan serves as a digital directory connecting Iraqi citizens with local professionals, clinics, workshops, and craftsmen without taking brokerage commissions on direct transactions.</p>
+
+            <p><strong>2. Provider Obligations & Moderation:</strong> Service providers must supply verified, accurate business information and hold legal authorization for their work. All registrations undergo administrative review before being published.</p>
+
+            <p><strong>3. Prohibited Content:</strong> Unlawful, infringing, abusive, defamatory, or misleading content is strictly prohibited. Violating accounts are permanently banned without notice.</p>
+
+            <p><strong>4. User Safety & Enforcement:</strong> Users have built-in reporting (Report) and blocking (Block) tools to flag abusive listings. Administrators act promptly on verified violations.</p>
+
+            <p><strong>5. Account Termination:</strong> Users can delete their account at any time via Settings &gt; Delete Account or by contacting <a href="mailto:Almohanad.dev.app@gmail.com" style="color:var(--primary);">Almohanad.dev.app@gmail.com</a>.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 تطبيق خدمة وطن (Khedma Watan) • جميع الحقوق محفوظة لشركة PRO IQ LTD</p>
+        </footer>
     </div>
 </body>
 </html>
